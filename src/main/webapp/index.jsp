@@ -1,5 +1,7 @@
 <html>  
 	<body>  
+		<a href="message/yash">yash</a><br>
+		<a href="users">users</a><br>
 		<a href="mvc">Spring MVC</a><br>
 		<a href="boot">Spring Boot</a><br>
 		<a href="core">Spring Core</a>

@@ -17,8 +17,16 @@
   
     <!--Provide support for conversion, formatting and validation -->  
     <mvc:annotation-driven/>  
-	<bean id="viewResolver" class="org.springframework.web.servlet.view.InternalResourceViewResolver">  
+	<!-- <bean id="viewResolver" class="org.springframework.web.servlet.view.InternalResourceViewResolver">  
         <property name="prefix" value="/WEB-INF/jsp/"></property>  
-        <property name="suffix" value=".jsp"></property>          
-     </bean>  
+        <property name="suffix" value=".ftl"></property>          
+     </bean>   -->
+     <bean id="freemarkerConfig" class="org.springframework.web.servlet.view.freemarker.FreeMarkerConfigurer">
+        <property name="templateLoaderPath" value="/WEB-INF/views/"/>
+    </bean>
+     <bean id="viewResolver" class="org.springframework.web.servlet.view.freemarker.FreeMarkerViewResolver">
+        <property name="cache" value="true"/>
+        <property name="prefix" value=""/>
+        <property name="suffix" value=".ftl"/>
+    </bean>  
 </beans>  
